@@ -582,8 +582,8 @@ extension SwiftyMarkdown {
             }
 						
 			if styles.contains(.strikethrough) {
-				attributes[.font] = self.font(for: line, characterOverride: .strikethrough)
 				attributes[.strikethroughStyle] = NSUnderlineStyle.single.rawValue as AnyObject
+                                attributes[.strikethroughColor] = self.strikethrough.color
 				attributes[.foregroundColor] = self.strikethrough.color
 			}
 			
